@@ -1,2 +1,2 @@
-# -Requirements
-*python = 3.10
+# Requirements
++ python = 3.10
