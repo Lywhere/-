@@ -9,3 +9,7 @@
 + scipy = 1.11.3
 + scs = 3.2.3
 # Files:
+ filename | explain
+ ------------------------- | -------------------------
+ new_2930_second_ATC.csv	 | The adjacency matrix of drugs and ATC codes at the second level.
+
