@@ -23,5 +23,7 @@
 Drug SMILES information, drug ATC code information, and drug target protein information were obtained from DrugBank database (https://go.drugbank.com/), drug side effect information were obtained from SIDER database (http://sideeffects.emblde/), and drug interaction information was obtained from STITCH website (http://stitch4.embl.de/).
 # Usage
 ## How to use it?
-## 1. Use the data set we provide
-## 1.1 Cross verification
+### 1. Use the data set we provide
+#### 1.1 Cross verification
+If you use our dataset for cross-validation, all you need to do is enter the following command in the termi
+`python main.py`  
