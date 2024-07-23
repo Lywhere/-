@@ -159,4 +159,10 @@ ___
         atc_fingerprint_path = 'your ATC-fingerprint adjacency matrix file path'
         op = Options(drug_atc_path=drug_atc_path, atc_target_protein_path=atc_target_protein_path, atc_side_effects_path=atc_side_effects_path, atc_fingerprint_path=atc_fingerprint_path, level=4, omega=0.9)
         op.train(k=10)
+        
+### The results predicted by the model
+After running our model, the PDATC-NCPMKL_predict.csv file and PDATC-NCPMKL_actual.csv file will be generated, where the PDATC-NCPMKL_predict.csv file will store the predicted score, the actual value is saved in the PDATC-NCPMKL_actual.csv file.
+## Result
+The PR curves and ROC curves predicted by our model on the dataset are shown below:
+
 
