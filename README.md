@@ -23,13 +23,13 @@
 Drug SMILES information, drug ATC code information, and drug target protein information were obtained from DrugBank database (https://go.drugbank.com/), drug side effect information were obtained from SIDER database (http://sideeffects.emblde/), and drug interaction information was obtained from STITCH website (http://stitch4.embl.de/).
 # Usage
 ## How to use it?
-### 1. Use the data set we provide
-#### 1.1 Cross verification
+## 1. Use the data set we provide
+### 1.1 Cross verification
 If you use our dataset for cross-validation, all you need to do is enter the following command in the termi
 
     python main.py 
     
-#### Modify model parameters 
+### 1.2 Modify model parameters 
 You just need to adjust the following code in the main.py file.
 
     if __name__ == "__main__":
@@ -47,14 +47,13 @@ You just need to adjust the following code in the main.py file.
 + The parameter level represents the level of ATC codes. It can be 2, 3 and 4.
 + The parameter omega represents parameter in WKNKN when reformulating the adjacency matrix. It can be any numbers between 0.0 and 1.0.
 + The parameter k represents the number of folds in cross-validation. k was set to 10 in our study.
-
-### 2. Use your own data set
-#### 2.1 Preprocessed data set
+## 2. Use your own data set
+### 2.1 Preprocessed data set
 You need to prepare some files, which are all in CSV format. The detailed format is displayed as below:
-##### 1. The adjacency matrix of drug-ATC code associations
-##### 2. Drug fingerprints matrix
-##### 3. Drug interaction kernel
-##### 4. Drug side effects matrix
-##### 5. Drug target proteins matrix
-##### 6. Because it involves ATC code tree structure to find the shortest path, different data sets involve different ATC, so you should prepare the shortest path file for ATC codes at different levels. It is also in CSV format, as shown below
+#### 1. The adjacency matrix of drug-ATC code associations
+#### 2. Drug fingerprints matrix
+#### 3. Drug side effects matrix
+#### 4. Drug target proteins matrix
+#### 5. Drug interaction kernel
+#### 6. Because it involves ATC code tree structure to find the shortest path, different data sets involve different ATC, so you should prepare the shortest path file for ATC codes at different levels. It is also in CSV format, as shown below
 
