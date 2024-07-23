@@ -37,7 +37,7 @@ You just need to adjust the following code in the main.py file.
         atc_target_protein_path = 'data/ATC_target_protein/second_uniprot.csv'
         atc_side_effects_path = 'data/ATC_side_effects/second_side_effects.csv'
         atc_fingerprint_path = 'data/ATC_fingerprint/second_fingerprint.csv'
-        op = Options(drug_atc_path, atc_target_protein_path, atc_side_effects_path, atc_fingerprint_path, level=4, omega=0.9)
+        op = Options(drug_atc_path=drug_atc_path, atc_target_protein_path=atc_target_protein_path, atc_side_effects_path=atc_side_effects_path, atc_fingerprint_path=atc_fingerprint_path, level=4, omega=0.9)
         op.train(k=10)
           
 + **drug_atc_path** is the file path storing the adjacency matrix of drug and ATC codes.
@@ -142,6 +142,21 @@ ATCcode*m* | 4 | 6 | 8 | 2 | ... | 0
 
 + You should put this file in the PDATC-NCPMKL/shortest_path/ folder, and it should have the same file name as mine. (For example, the second level ATC code file is named new_2ATC_shortest_path_length_matrix.csv)
 + In addition, in order to prevent the accuracy of SPro kernel matrix calculation, ensure that the order of ATCcode here is consistent with that in the adjacency matrix of drug-ATC code.
+### 2.2 Cross verification
+You just need to modify the following code in the main.py file to run it:
 
-
+    def file_path(self):
+        drug_fingerprint_path = 'your own drug fingerprint file path'
+        drug_side_effects_path = 'your own drug side effect file path'
+        drug_target_protein_path = 'your own drug target protein file path'
+        drug_interaction_path = 'your own drug interaction file path'
+        return drug_fingerprint_path, drug_side_effects_path, drug_target_protein_path, drug_interaction_path
+---
+    if __name__ == "__main__":
+        drug_atc_path = 'your drug-ATC code adjacency matrix file path'
+        atc_target_protein_path = 'your ATC-target protein adjacency matrix file path'
+        atc_side_effects_path = 'your ATC-side effect adjacency matrix file path'
+        atc_fingerprint_path = 'your ATC-fingerprint adjacency matrix file path'
+        op = Options(drug_atc_path=drug_atc_path, atc_target_protein_path=atc_target_protein_path, atc_side_effects_path=atc_side_effects_path, atc_fingerprint_path=atc_fingerprint_path, level=4, omega=0.9)
+        op.train(k=10)
 
