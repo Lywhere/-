@@ -26,4 +26,4 @@ Drug SMILES information, drug ATC code information, and drug target protein info
 ### 1. Use the data set we provide
 #### 1.1 Cross verification
 If you use our dataset for cross-validation, all you need to do is enter the following command in the termi
-<p><a href="home" title="说明">门前大桥下</a></p>
+<p><a href="/home" title="说明">门前大桥下</a></p>
