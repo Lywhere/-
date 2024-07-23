@@ -52,9 +52,13 @@ You just need to adjust the following code in the main.py file.
 You need to prepare some files, which are all in CSV format. The detailed format is displayed as below:
 #### 1. The adjacency matrix of drug-ATC code associations
 DrugBankID | ATCcode*1* | ATCcode*2* | ATCcode*3* | ATCcode*4* | ... | ATCcode*m*
- ------ | ------ | ------ | ------ | ------ | ------ | -------
- drugID*1* | 0 | 1 | 1 | 0 | ... | 0
- 
+------ | ------ | ------ | ------ | ------ | ------ | -------
+drugID*1* | 0 | 1 | 1 | 0 | ... | 0
+drugID*2* | 1 | 0 | 0 | 1 | ... | 0
+drugID*3* | 1 | 1 | 0 | 0 | ... | 1
+drugID*4* | 1 | 1 | 0 | 0 | ... | 1
+... | ... | ... | ... | ... | ... | ...
+drugID*n* | 0 | 0 | 1 | 1 | ... | 0
  drug_ATC | The adjacency matrix of drugs and ATC codes at the second,third,fourth level.
 #### 2. Drug fingerprints matrix
 #### 3. Drug side effects matrix
