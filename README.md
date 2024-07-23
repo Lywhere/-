@@ -145,6 +145,7 @@ ATCcode*m* | 4 | 6 | 8 | 2 | ... | 0
 ### 2.2 Cross verification
 You just need to modify the following code in the main.py file to run it:
 
+```python
     def file_path(self):
         drug_fingerprint_path = 'your own drug fingerprint file path'
         drug_side_effects_path = 'your own drug side effect file path'
@@ -167,8 +168,5 @@ The PR curves and ROC curves predicted by our model on the dataset are shown bel
 1. The PR curves 
 2. The ROC curves
 
-```python
-x = [1,2,3]
-print(x)```
 
 
