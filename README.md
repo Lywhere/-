@@ -27,5 +27,29 @@ Drug SMILES information, drug ATC code information, and drug target protein info
 #### 1.1 Cross verification
 If you use our dataset for cross-validation, all you need to do is enter the following command in the termi
 
-     python main.py 
+    python main.py 
+    
+#### Modify model parameters
+You just need to adjust the following code in the main.py file.
+
+    if __name__ == "__main__":
+        drug_atc_path = 'data/drug_ATC/second_ATC.csv'
+        atc_target_protein_path = 'data/ATC_target_protein/second_uniprot.csv'
+        atc_side_effects_path = 'data/ATC_side_effects/second_side_effects.csv'
+        atc_fingerprint_path = 'data/ATC_fingerprint/second_fingerprint.csv'
+        op = Options(drug_atc_path, atc_target_protein_path, atc_side_effects_path, atc_fingerprint_path, level=4, omega=0.9)
+        op.train(k=10)
+        
++ drug_atc_path is the file path storing the adjacency matrix of drug and ATC codes.
++ atc_target_protein_path is the file path storing the adjacency matrix of ATC codes and target protein.
++ atc_side_effects_path is the file path storing the adjacency matrix of ATC codes and side effects.
++ atc_fingerprint_path is the file path storing the adjacency matrix of ATC codes and fingerprint.
++ The parameter level represents the level of ATC codes. It can be 2, 3 and 4.
++ The parameter omega represents parameter in WKNKN when reformulating the adjacency matrix. It can be any numbers between 0.0 and 1.0.
++ The parameter k represents the number of folds in cross-validation. k was set to 10 in our study.
+
+### 2. Use your own data set
+#### 2.1 Preprocessed data set
+You need to prepare some files, which are all in CSV format. The detailed format is displayed as below:
+##### 1. The adjacency matrix of drug-ATC code associations
 
