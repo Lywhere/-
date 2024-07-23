@@ -59,7 +59,6 @@ drugID*3* | 1 | 1 | 0 | 0 | ... | 1
 drugID*4* | 1 | 1 | 0 | 0 | ... | 1
 ... | ... | ... | ... | ... | ... | ...
 drugID*n* | 0 | 0 | 1 | 1 | ... | 0
- drug_ATC | The adjacency matrix of drugs and ATC codes at the second,third,fourth level.
 #### 2. Drug fingerprints matrix
 #### 3. Drug side effects matrix
 #### 4. Drug target proteins matrix
