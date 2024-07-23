@@ -30,12 +30,6 @@ If you use our dataset for cross-validation, all you need to do is enter the fol
     python main.py 
     
 #### Modify model parameters 
-
-    if __name__ == "__main__":
-        drug_atc_path = 'data/drug_ATC/new_2930_fourth_ATC.csv'
-        op = Options(drug_atc_path=drug_atc_path, level=4, omega=0.9)
-        op.train(k=10)
-    
 You just need to adjust the following code in the main.py file.
 
     if __name__ == "__main__":
@@ -58,4 +52,9 @@ You just need to adjust the following code in the main.py file.
 #### 2.1 Preprocessed data set
 You need to prepare some files, which are all in CSV format. The detailed format is displayed as below:
 ##### 1. The adjacency matrix of drug-ATC code associations
+##### 2. Drug fingerprints matrix
+##### 3. Drug interaction kernel
+##### 4. Drug side effects matrix
+##### 5. Drug target proteins matrix
+##### 6. Because it involves ATC code tree structure to find the shortest path, different data sets involve different ATC, so you should prepare the shortest path file for ATC codes at different levels. It is also in CSV format, as shown below
 
