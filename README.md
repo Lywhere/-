@@ -29,7 +29,13 @@ If you use our dataset for cross-validation, all you need to do is enter the fol
 
     python main.py 
     
-#### Modify model parameters
+#### Modify model parameters 
+
+    if __name__ == "__main__":
+        drug_atc_path = 'data/drug_ATC/new_2930_fourth_ATC.csv'
+        op = Options(drug_atc_path=drug_atc_path, level=4, omega=0.9)
+        op.train(k=10)
+    
 You just need to adjust the following code in the main.py file.
 
     if __name__ == "__main__":
@@ -39,13 +45,7 @@ You just need to adjust the following code in the main.py file.
         atc_fingerprint_path = 'data/ATC_fingerprint/second_fingerprint.csv'
         op = Options(drug_atc_path, atc_target_protein_path, atc_side_effects_path, atc_fingerprint_path, level=4, omega=0.9)
         op.train(k=10)
-
-    if __name__ == "__main__":
-    drug_atc_path = 'data/drug_ATC/new_2930_fourth_ATC.csv'
-    op = Options(drug_atc_path=drug_atc_path, level=4, omega=0.9)
-    op.train(k=10)
-  
-        
+          
 + drug_atc_path is the file path storing the adjacency matrix of drug and ATC codes.
 + atc_target_protein_path is the file path storing the adjacency matrix of ATC codes and target protein.
 + atc_side_effects_path is the file path storing the adjacency matrix of ATC codes and side effects.
