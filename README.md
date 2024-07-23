@@ -51,9 +51,16 @@ You just need to adjust the following code in the main.py file.
 ### 2.1 Preprocessed data set
 You need to prepare some files, which are all in CSV format. The detailed format is displayed as below:
 #### 1. The adjacency matrix of drug-ATC code associations
+DrugBankID | ATCcode1 | ATCcode2 | ATCcode3 | ATCcode4 | ... | ATCcodem
+ ------ | ------ | ------ | ------ | ------ | ------ | -------
+ DrugID1 | 0 | 1 | 1 | 0 | ... | 0
+ drug_ATC | The adjacency matrix of drugs and ATC codes at the second,third,fourth level.
 #### 2. Drug fingerprints matrix
 #### 3. Drug side effects matrix
 #### 4. Drug target proteins matrix
 #### 5. Drug interaction kernel
-#### 6. Because it involves ATC code tree structure to find the shortest path, different data sets involve different ATC, so you should prepare the shortest path file for ATC codes at different levels. It is also in CSV format, as shown below
+#### 6. ATC code fingerprints matrix
+#### 7. ATC code side effects matrix
+#### 8. ATC code target proteins matrix
+#### 9. Because it involves ATC code tree structure to find the shortest path, different data sets involve different ATC, so you should prepare the shortest path file for ATC codes at different levels. It is also in CSV format, as shown below
 
