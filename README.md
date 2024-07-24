@@ -150,22 +150,22 @@ ATCcode*m* | 4 | 6 | 8 | 2 | ... | 0
 You just need to modify the following code in the main.py file to run it:
 
 ```python
-    def file_path(self):
-        drug_fingerprint_path = 'your own drug fingerprint file path'
-        drug_side_effects_path = 'your own drug side effect file path'
-        drug_target_protein_path = 'your own drug target protein file path'
-        drug_interaction_path = 'your own drug interaction file path'
-        return drug_fingerprint_path, drug_side_effects_path, drug_target_protein_path, drug_interaction_path
+def file_path(self):
+    drug_fingerprint_path = 'your own drug fingerprint file path'
+    drug_side_effects_path = 'your own drug side effect file path'
+    drug_target_protein_path = 'your own drug target protein file path'
+    drug_interaction_path = 'your own drug interaction file path'
+    return drug_fingerprint_path, drug_side_effects_path, drug_target_protein_path, drug_interaction_path
 ```
 
 ```python
-    if __name__ == "__main__":
-        drug_atc_path = 'your drug-ATC code adjacency matrix file path'
-        atc_target_protein_path = 'your ATC-target protein adjacency matrix file path'
-        atc_side_effects_path = 'your ATC-side effect adjacency matrix file path'
-        atc_fingerprint_path = 'your ATC-fingerprint adjacency matrix file path'
-        op = Options(drug_atc_path=drug_atc_path, atc_target_protein_path=atc_target_protein_path, atc_side_effects_path=atc_side_effects_path, atc_fingerprint_path=atc_fingerprint_path, level=4, omega=0.9)
-        op.train(k=10)
+if __name__ == "__main__":
+    drug_atc_path = 'your drug-ATC code adjacency matrix file path'
+    atc_target_protein_path = 'your ATC-target protein adjacency matrix file path'
+    atc_side_effects_path = 'your ATC-side effect adjacency matrix file path'
+    atc_fingerprint_path = 'your ATC-fingerprint adjacency matrix file path'
+    op = Options(drug_atc_path=drug_atc_path, atc_target_protein_path=atc_target_protein_path, atc_side_effects_path=atc_side_effects_path, atc_fingerprint_path=atc_fingerprint_path, level=4, omega=0.9)
+    op.train(k=10)
 ```
     
 ### The results predicted by the model
