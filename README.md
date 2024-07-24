@@ -27,9 +27,7 @@ Drug SMILES information, drug ATC code information, and drug target protein info
 ### 1.1 Cross verification
 If you use our dataset for cross-validation, all you need to do is enter the following command in the termi
 
-`python
     python main.py 
-`
 
 ### 1.2 Modify model parameters 
 You just need to adjust the following code in the main.py file.
