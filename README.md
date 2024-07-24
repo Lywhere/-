@@ -27,11 +27,14 @@ Drug SMILES information, drug ATC code information, and drug target protein info
 ### 1.1 Cross verification
 If you use our dataset for cross-validation, all you need to do is enter the following command in the termi
 
+
     python main.py 
-    
+
+
 ### 1.2 Modify model parameters 
 You just need to adjust the following code in the main.py file.
 
+```python
     if __name__ == "__main__":
         drug_atc_path = 'data/drug_ATC/second_ATC.csv'
         atc_target_protein_path = 'data/ATC_target_protein/second_uniprot.csv'
@@ -39,7 +42,8 @@ You just need to adjust the following code in the main.py file.
         atc_fingerprint_path = 'data/ATC_fingerprint/second_fingerprint.csv'
         op = Options(drug_atc_path=drug_atc_path, atc_target_protein_path=atc_target_protein_path, atc_side_effects_path=atc_side_effects_path, atc_fingerprint_path=atc_fingerprint_path, level=4, omega=0.9)
         op.train(k=10)
-          
+```
+
 + **drug_atc_path** is the file path storing the adjacency matrix of drug and ATC codes.
 + **atc_target_protein_path** is the file path storing the adjacency matrix of ATC codes and target protein.
 + **atc_side_effects_path** is the file path storing the adjacency matrix of ATC codes and side effects.
@@ -163,7 +167,7 @@ You just need to modify the following code in the main.py file to run it:
         op = Options(drug_atc_path=drug_atc_path, atc_target_protein_path=atc_target_protein_path, atc_side_effects_path=atc_side_effects_path, atc_fingerprint_path=atc_fingerprint_path, level=4, omega=0.9)
         op.train(k=10)
 ```
-        
+    
 ### The results predicted by the model
 After running our model, the **PDATC-NCPMKL_predict.csv** file and **PDATC-NCPMKL_actual.csv** file will be generated, where the **PDATC-NCPMKL_predict.csv** file will store the **predicted score**, the **actual value** is saved in the **PDATC-NCPMKL_actual.csv** file.
 ## Result
