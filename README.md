@@ -142,7 +142,7 @@ ATCcode*4* | 4 | 8 | 4 | 0 | ... | 2
 ... | ... | ... | ... | ... | ... | ...
 ATCcode*m* | 4 | 6 | 8 | 2 | ... | 0
 
-+ You should put this file in the **PDATC-NCPMKL/shortest_path/** folder, and it should have **the same file name as mine. (For example, the second level ATC code file is named new_2ATC_shortest_path_length_matrix.csv)**
++ You should put this file in the **NAME-NCPMKL/shortest_path/** folder, and it should have **the same file name as mine. (For example, the second level ATC code file is named new_2ATC_shortest_path_length_matrix.csv)**
 + In addition, in order to prevent the accuracy of SPro kernel matrix calculation, ensure that the order of ATCcode here is consistent with that in **the adjacency matrix of drug-ATC code**.
 ### 2.2 Cross verification
 You just need to modify the following code in the main.py file to run it:
