@@ -1,6 +1,6 @@
 # PDATC-NCPMKL-updated
 This repository provides the data and codes for the prediction of drug-ATC code associations. An inference method is first designed to identify highly related target proteins, fingerprints, and side effects of ATC codes, which adopts random walk with restart algorithm and permutation test. The procedures are illustrated in the following figure.
-![image text](https://github.com/Lywhere/PDATC-NCPMKL-updated/blob/main/model/Figure%201.pdf)
+![image text](https://github.com/Lywhere/PDATC-NCPMKL-updated/blob/main/Figure%201.png)
 # Requirements
 + python = 3.10
 + cvxopt = 1.3.2
