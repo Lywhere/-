@@ -19,9 +19,9 @@ This repository provides the data and codes for the prediction of drug-ATC code 
  drug_side_effects | The drug representation based on their side effects.
  drug_target_protein | The drug representation based on their target proteins.
  drug_interaction | The drug kernel using the interaction information collected in STITCH.
- ATC_fingerprint | The ATC code representation based on their fingerprints at the second,third,fourth level.
- ATC_side_effects | The ATC code representation based on their side effects at the second,third,fourth level.
- ATC_target_protein | The ATC code representation based on their target proteins at the second,third,fourth level.
+ ATC_fingerprint | The ATC code representation based on their fingerprints at the second, third, fourth level.
+ ATC_side_effects | The ATC code representation based on their side effects at the second, third, fourth level.
+ ATC_target_protein | The ATC code representation based on their target proteins at the second, third, fourth level.
 
 Drug SMILES information, drug ATC code information, and drug target protein information were obtained from DrugBank database (https://go.drugbank.com/), drug side effect information were obtained from SIDER database (http://sideeffects.emblde/), and drug interaction information was obtained from STITCH website (http://stitch4.embl.de/).
 # Usage
